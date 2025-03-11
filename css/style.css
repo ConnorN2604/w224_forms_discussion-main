@@ -1,0 +1,99 @@
+  /* Create an accessible color palette using var()function */
+  /* https://www.w3schools.com/css/css3_variables.asp */
+  :root {
+    /* Primary Text Colors */
+    --text-primary: #000000; /* Black for highest contrast */
+  
+    /* Secondary Text Colors (Shades of Gray for Contrast Variations) */
+    --text-secondary: #333333; /* Dark gray for a softer contrast */
+    --text-tertiary: #555555; /* Medium gray for subtle emphasis */
+  
+    /* Background Colors */
+    --bg-primary: #87AB9C; /* Muted teal-green */
+    --bg-secondary: #8DB1B1; /* Cool desaturated cyan */
+    --bg-tertiary: #B1C4D2; /* Soft blue-gray */
+    --bg-light: #DCDCDC; /* Light gray */
+    --bg-lighter: #DBDBD9; /* Off-white gray */
+    
+    /* Border Colors */
+    --border-light: #B1C4D2; /* Subtle border */
+    --border-dark: #555555; /* Darker for contrast */
+  } 
+  
+  body {
+    font-family: sans-serif;
+  }
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    padding: 10px;
+    z-index: 100;
+  }
+  .skip-link:focus {
+    top: 10px;
+  }
+  form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 1px solid var(--border-dark);
+    border-radius: 16px;
+    width:70%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+  }
+
+  .radio {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* background: #575294; */
+    background-color: var(--bg-light);
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid var(--border-dark);
+    border-radius: 16px;
+  }
+
+  #name {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background: var(--bg-tertiary);
+    color: var(--text-tertiary);
+    border: 1px solid var(--border-dark);
+  }
+
+  #message {
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--bg-lighter);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
